@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="org.dague.qa.listeners.MyListeners" />
+    </listeners>
+    <test verbose="2" preserve-order="true" name="C:/Users/dague/IdeaProjects/TestngSelenium">
+        <classes>
+            <class name="org.dague.qa.testcases.LoginTest">
+                <methods>
+                    <include name="verifyLoginWithValidCredentials"/>
+                    <include name="verifyLoginWithInvalidCredentials"/>
+                    <include name="verifyLoginWithInvalidEmailAndValidPassword"/>
+                    <include name="verifyLoginWithValidEmailAndinValidPassword"/>
+                    <include name="verifyLoginWithoutProvidingCredentials"/>
+                </methods>
+            </class>
+            <class name="org.dague.qa.testcases.RegisterTest">
+                <methods>
+                    <include name="verifyRegisteringAnAccountWithMandatoryFields"/>
+                    <include name="verifyRegisteringAccountByProvidingAllFields"/>
+                    <include name="verifyRegisteringAccountWithExistingEmailAddress"/>
+                    <include name="verifyRegisteringAccountWithoutFillingAnyDetails"/>
+                </methods>
+            </class>
+            <class name="org.dague.qa.testcases.SearchTest">
+                <methods>
+                    <include name="verifySearchWithValidProduct"/>
+                    <include name="verifySearchWithInvalidProduct"/>
+                    <include name="verifySearchWithoutAnyProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
